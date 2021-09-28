@@ -1,0 +1,97 @@
+.btn {
+  position: relative;
+  display: block;
+  min-width: 276px;
+  width: fit-content;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: $radius;
+  border: 2px solid transparent;
+  background: $mainGradient border-box;
+  z-index: 0;
+  cursor: pointer;
+
+  @media screen and (max-width: 544px) {
+    min-width: 100%;
+  }
+
+  &:hover,
+  &:active {
+    border-color: $mainBorder;
+    background: transparent;
+
+    span {
+      background: $mainGradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  span {
+    @include text-style(bold, 14px, 1.5, uppercase, $textDark);
+  }
+
+  &_o {
+    background: transparent;
+    border-color: $mainBorder;
+
+    &:hover,
+    &:active {
+      border-color: transparent;
+      background: $mainGradient border-box;
+
+      span {
+        background: $textDark;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    span {
+      background: $mainGradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &_red {
+    background: $redGradient border-box;
+
+    &:hover,
+    &:active {
+      border-color: $redBorder;
+      background: transparent;
+
+      span {
+        background: $redGradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    span {
+      color: $textWhite;
+    }
+  }
+
+  &_blue {
+    background: $blueGradient border-box;
+
+    &:hover,
+    &:active {
+      border-color: $blueBorder;
+      background: transparent;
+
+      span {
+        background: $blueGradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    span {
+      color: $textWhite;
+    }
+  }
+
+}

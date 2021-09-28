@@ -1,0 +1,81 @@
+$font: 'Roboto', sans-serif;
+$fontSize: 14px;
+
+$mainColor: #232325;
+$mainDark:#1B1B1C;
+$mainDarker: #0D0D0D;
+$mainLight: #353535;
+$mainLighter: #484848;
+$mainLightest: #EAEAEA;
+
+$accentColor: #FFBB04;
+
+$mainGradient: linear-gradient(90deg, #FFBA05 0%, #FFE300 100%);
+$redGradient: linear-gradient(90deg, #F20D41 0%, #F74A51 100%);
+$blueGradient: linear-gradient(90deg, #0251F1 0%, #0F97FF 100%);
+$opacityGradient: linear-gradient(180deg, rgba(13, 13, 13, 0.9) 0%, rgba(13, 13, 13, 0) 100%);
+
+$mainBorder: #FFBA05;
+$redBorder: #F20D41;
+$blueBorder: #0251F1;
+
+$textWhite: #FFFFFF;
+$textDark: #232325;
+$textLight: #BABABA;
+$textGrey: #444444;
+$textYellow: #FBC901;
+
+$lineColor: #444444;
+
+$radius: 10px;
+$radiusMedium: 7px;
+$radiusSmall: 6px;
+
+@function rem($size) {
+  @return $size / $fontSize * 1rem;
+}
+
+// style for heading text
+@mixin text-style($fontWeight: normal, $size: $fontSize, $lineHeight: false, $textTransform: false, $color: false) {
+
+  @if $fontWeight {
+    font-weight: $fontWeight;
+  }
+
+  @if $lineHeight {
+    line-height: $lineHeight;
+  }
+
+  @if $size {
+    font-size: rem($size);
+  }
+
+  @if $textTransform {
+    text-transform: $textTransform;
+  }
+
+  @if $color {
+    color: $color;
+  }
+}
+
+@mixin resp-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + '%');
+
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  }
+
+  @else {
+    padding-top: $padding;
+  }
+}
+
+$dropdownWhite: url("data:image/svg+xml,%3Csvg width='5' height='4' viewBox='0 0 5 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.74742 3.13991L0.451191 1.6585C-0.114569 1.01192 0.344609 0 1.20377 0H3.79623C4.65539 0 5.11457 1.01192 4.54881 1.6585L3.25258 3.13991C2.85417 3.59524 2.14584 3.59524 1.74742 3.13991Z' fill='white'/%3E%3C/svg%3E%0A");
+$dropdownGradient: url("data:image/svg+xml,%3Csvg width='5' height='4' viewBox='0 0 5 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.74742 3.13991L0.451191 1.6585C-0.114569 1.01192 0.344609 0 1.20377 0H3.79623C4.65539 0 5.11457 1.01192 4.54881 1.6585L3.25258 3.13991C2.85417 3.59524 2.14584 3.59524 1.74742 3.13991Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='-1' y1='2' x2='6' y2='2' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFBA05'/%3E%3Cstop offset='1' stop-color='%23FFE300'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+$sliderArrow: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='8' fill='url(%23paint0_linear)'/%3E%3Cpath d='M17 12L25 20L17 28' stroke='%230D0D0D' stroke-width='2'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='-2.98023e-07' y1='20' x2='40' y2='20' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFBA05'/%3E%3Cstop offset='1' stop-color='%23FFE300'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+$sliderArrowActive: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.99951 38.9995H31.9995C35.8655 38.9995 38.9995 35.8655 38.9995 31.9995V7.99951C38.9995 4.13352 35.8655 0.999512 31.9995 0.999512H7.99951C4.13352 0.999512 0.999512 4.13352 0.999512 7.99951L0.999512 31.9995C0.999512 35.8655 4.13352 38.9995 7.99951 38.9995Z' stroke='url(%23paint0_linear)' stroke-width='2'/%3E%3Cpath d='M16.9995 27.9995L24.9995 19.9995L16.9995 11.9995' stroke='url(%23paint1_linear)' stroke-width='2'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='-0.000488579' y1='19.9995' x2='39.9995' y2='19.9995' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFBA05'/%3E%3Cstop offset='1' stop-color='%23FFE300'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='16.9995' y1='19.9995' x2='24.9995' y2='19.9995' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFBA05'/%3E%3Cstop offset='1' stop-color='%23FFE300'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");

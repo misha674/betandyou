@@ -1,0 +1,234 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 768px) {
+    border-radius: 0;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+  }
+
+  .desktop {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .mobile {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $mainLight;
+    color: $textWhite;
+    width: 100%;
+  }
+
+  &__cell {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 0;
+    }
+
+    &.small {
+      font-size: rem(12px);
+    }
+
+    &.players {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        color: $textGrey;
+      }
+    }
+  }
+
+  &__col {
+    max-width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .number {
+
+    .table__col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__head {
+      width: 100%;
+      height: 20px;
+      padding: 4px 10px;
+      background-color: $mainLightest;
+      border-radius: $radiusSmall $radiusSmall 0 0;
+    }
+
+    &__val {
+      min-width: 100%;
+      min-height: 30px;
+      padding: 4px 10px;
+      background-color: $mainLightest;
+      border-radius: $radius;
+
+      &:hover {
+        color: $textWhite;
+        background-color: $mainLight;
+      }
+
+      @media screen and (max-width: 768px) {
+        min-height: 20px;
+        height: 20px;
+        background-color: $mainDarker;
+        border-radius: 0 0 $radiusSmall $radiusSmall;
+        color: $textWhite;
+      }
+    }
+
+    @media screen and (max-width: 1238px) {
+      font-size: rem(12px);
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 50px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    color: $textGrey;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .table__cell {
+      background-color: $textWhite;
+      color: $textDark;
+      border: .5px solid $mainColor;
+
+      @media screen and (max-width: 768px) {
+        border: none;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      width: 276px;
+      flex-direction: column;
+      margin-right: 10px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    .info {
+      display: flex;
+      width: 25%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        border-radius: $radius $radius 0 0;
+        overflow: hidden;
+      }
+
+      .table__cell {
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+          padding: 5px;
+        }
+
+        .bold {
+          font-weight: bold;
+        }
+
+        .sep {
+          padding: 0 5px;
+        }
+
+        .name {
+          @media screen and (max-width: 768px) {
+            width: auto;
+            max-width: 50%;
+          }
+        }
+      }
+    }
+
+    .values {
+      display: flex;
+      width: 75%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        overflow-x: scroll;
+        border-radius: 0 0 $radius $radius;
+      }
+
+      .table__cell {
+        width: calc(100% / 3);
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .trim {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  &__button {
+    margin-bottom: 50px;
+  }
+}

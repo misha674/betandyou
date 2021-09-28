@@ -1,0 +1,68 @@
+.bonus {
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 992px) {
+    padding-bottom: 50px;
+  }
+
+  &__body {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(277px, 1fr));
+  }
+
+  .item {
+    border: 1px solid $lineColor;
+    border-radius: $radius;
+    overflow: hidden;
+
+    &__top {
+      position: relative;
+    }
+
+    &__name {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      @include text-style(bold, 18px, 1.15, uppercase, $textWhite);
+      z-index: 2;
+    }
+
+    &__img {
+      position: relative;
+      @include resp-ratio(378, 235);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $opacityGradient left top no-repeat;
+        z-index: 1;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+    }
+
+    &__bottom {
+      width: 100%;
+      background-color: $mainDark;
+      padding: 20px;
+    }
+
+    &__button {
+      min-width: 100%;
+    }
+  }
+}

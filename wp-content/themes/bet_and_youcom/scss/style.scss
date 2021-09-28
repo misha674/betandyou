@@ -1,0 +1,28 @@
+// config
+@import 'reset';
+@import 'fonts';
+@import 'variables';
+@import 'slick';
+@import 'general';
+
+// components
+@import 'burger';
+@import 'menu';
+@import 'buttons';
+@import 'table';
+@import 'breadcrumbs';
+@import 'frame';
+@import 'popup';
+@import 'cta-popup';
+@import 'game-item';
+
+// blocks
+@import 'header';
+@import 'slider';
+@import 'game-slider';
+@import 'sidebar';
+@import 'game-list';
+@import 'bonus-list';
+@import 'footer';
+@import '404';
+@import 'blog';

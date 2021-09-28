@@ -1,0 +1,79 @@
+.cta {
+  position: relative;
+  visibility: hidden;
+
+  &__wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $mainDark;
+    z-index: 5;
+    transform: translateY(100%);
+    transition: all .3s;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 15px 50px 15px 0;
+
+    @media screen and (max-width: 400px) {
+      padding: 15px 30px 15px 0;
+    }
+
+    img {
+      @media screen and (max-width: 992px) {
+        max-width: 140px;
+      }
+
+      @media screen and (max-width: 400px) {
+        max-width: 120px;
+      }
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: 768px) {
+      min-width: auto;
+    }
+
+    @media screen and (max-width: 400px) {
+      padding: 5px 15px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border: none;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 3px;
+      background: $textWhite;
+      border-radius: $radius;
+    }
+
+    &::after {
+      transform: translateY(250%) rotate(45deg);
+    }
+
+    &::before {
+      transform: translateY(250%) rotate(135deg);
+    }
+  }
+}

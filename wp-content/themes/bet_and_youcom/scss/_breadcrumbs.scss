@@ -1,0 +1,22 @@
+.custom_breadcrumbs {
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  a,
+  span {
+    text-decoration: none;
+    color: $textLight;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .kb_sep {
+    position: relative;
+    margin: 0 20px;
+  }
+}

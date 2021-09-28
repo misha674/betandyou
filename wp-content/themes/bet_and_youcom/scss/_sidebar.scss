@@ -1,0 +1,76 @@
+.sidebar {
+  height: 100%;
+
+  @media screen and (max-width: 992px) {
+      padding-bottom: 50px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__widget {
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 992px) {
+      margin: 0 10px 20px 10px;
+
+      &:not(:first-of-type) {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin: 0 10px;
+      }
+    }
+
+    @media screen and (max-width: 544px) {
+      margin: 0 0 20px;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  .sticky {
+    position: sticky;
+    top: 90px;
+    left: 0;
+
+    @media screen and (max-width: 992px) {
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
+.widget {
+  position: relative;
+  max-width: 276px;
+  width: 100%;
+
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  &__button {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    min-width: calc(100% - 40px);
+  }
+}

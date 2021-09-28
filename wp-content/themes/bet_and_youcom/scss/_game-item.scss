@@ -1,0 +1,62 @@
+.game {
+  position: relative;
+  border-radius: $radius;
+  overflow: hidden;
+
+  &:hover {
+    .game__overlay {
+      visibility: visible;
+    }
+  }
+
+  &__image {
+    @include resp-ratio(220, 152);
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+  }
+
+  &__overlay {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000000, .5);
+    padding: 15px;
+
+    @media screen and (max-width: 768px) {
+      padding: 8px;
+    }
+  }
+
+  &__name {
+    text-align: center;
+    @include text-style(bold, 16px, 1.5, normal, $textWhite);
+  }
+
+  &__btn {
+    min-width: 145px;
+
+    @media screen and (max-width: 544px) {
+      min-width: 90%;
+    }
+
+    &_demo {
+      @include text-style(bold, 14px, 19px, normal, $textWhite);
+      text-align: center;
+    }
+  }
+}
