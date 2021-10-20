@@ -1,0 +1,214 @@
+# Translation of Plugins - Animate It! - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Animate It! - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-09 10:36:22+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Animate It! - Stable (latest release)\n"
+
+#: assets/helper/edsanimate-tinymce-popup.php:506
+msgid "Insert"
+msgstr "Вставить"
+
+#: assets/helper/edsanimate-tinymce-popup.php:504
+msgid "Stop Animation"
+msgstr "Остановить анимацию"
+
+#: assets/helper/edsanimate-tinymce-popup.php:500
+msgid "Documentation"
+msgstr "Документация"
+
+#: assets/helper/edsanimate-tinymce-popup.php:497
+msgid "Review Plugin"
+msgstr "Плагин для рецензирования"
+
+#: assets/helper/edsanimate-tinymce-popup.php:494
+msgid "Powered by"
+msgstr "Работает на"
+
+#: assets/helper/edsanimate-tinymce-popup.php:482
+msgid "Scroll Offset (in %)"
+msgstr "Смещение прокрутки (в %)"
+
+#: assets/helper/edsanimate-tinymce-popup.php:477
+msgid "Scroll"
+msgstr "Прокрутка"
+
+#: assets/helper/edsanimate-tinymce-popup.php:475
+msgid "Hover"
+msgstr "При наведении"
+
+#: assets/helper/edsanimate-tinymce-popup.php:473
+msgid "Click"
+msgstr "Клик мыши"
+
+#: assets/helper/edsanimate-tinymce-popup.php:471
+msgid "Load"
+msgstr "Загрузить"
+
+#: assets/helper/edsanimate-tinymce-popup.php:468
+msgid "Animate On"
+msgstr "Анимировать на"
+
+#: assets/helper/edsanimate-tinymce-popup.php:460
+msgid "Custom CSS Class"
+msgstr "Пользовательский класс CSS"
+
+#: assets/helper/edsanimate-tinymce-popup.php:451
+msgid "Keep Element Final State"
+msgstr "Сохранить конечное состояние элемента"
+
+#: assets/helper/edsanimate-tinymce-popup.php:443
+msgid "Infinite"
+msgstr ""
+"\t\n"
+"бесконечно"
+
+#: assets/helper/edsanimate-tinymce-popup.php:442
+msgid "Thrice"
+msgstr "Трижды"
+
+#: assets/helper/edsanimate-tinymce-popup.php:441
+msgid "Twice"
+msgstr "Дважды"
+
+#: assets/helper/edsanimate-tinymce-popup.php:440
+msgid "Once"
+msgstr "Один раз"
+
+#: assets/helper/edsanimate-tinymce-popup.php:436
+msgid "Animation Repeat"
+msgstr "Повторение анимации"
+
+#: assets/helper/edsanimate-tinymce-popup.php:200
+#: assets/helper/edsanimate-tinymce-popup.php:397
+msgid "Timing"
+msgstr "Промежуток"
+
+#: assets/helper/edsanimate-tinymce-popup.php:177
+#: assets/helper/edsanimate-tinymce-popup.php:374
+msgid "Duration (in seconds)"
+msgstr "Продолжительность (в сек.)"
+
+#: assets/helper/edsanimate-tinymce-popup.php:170
+#: assets/helper/edsanimate-tinymce-popup.php:193
+#: assets/helper/edsanimate-tinymce-popup.php:367
+#: assets/helper/edsanimate-tinymce-popup.php:390
+#: assets/helper/edsanimate-tinymce-popup.php:444
+msgid "Custom"
+msgstr "Произвольно"
+
+#: assets/helper/edsanimate-tinymce-popup.php:153
+#: assets/helper/edsanimate-tinymce-popup.php:350
+msgid "Delay (in seconds)"
+msgstr "Задержка (в сек.)"
+
+#: assets/helper/edsanimate-tinymce-popup.php:46
+#: assets/helper/edsanimate-tinymce-popup.php:157
+#: assets/helper/edsanimate-tinymce-popup.php:243
+#: assets/helper/edsanimate-tinymce-popup.php:354
+msgid "None"
+msgstr "нет"
+
+#: assets/helper/edsanimate-tinymce-popup.php:42
+#: assets/helper/edsanimate-tinymce-popup.php:239
+msgid "Animation"
+msgstr "Анимация"
+
+#: assets/helper/edsanimate-tinymce-popup.php:36
+msgid "Options"
+msgstr "Настройки"
+
+#: assets/helper/edsanimate-tinymce-popup.php:33
+msgid "Exit"
+msgstr "Выход"
+
+#: assets/helper/edsanimate-tinymce-popup.php:30
+msgid "Entry"
+msgstr "Запись"
+
+#: assets/helper/edsanimate-tinymce-popup.php:8
+#: assets/helper/eds-tinymce-plugin-langs.php:12
+msgid "Select your Animation Style"
+msgstr "Выберите свой стиль анимации"
+
+#: edsanimate.php:557
+msgid "Settings"
+msgstr "Настройки"
+
+#: edsanimate.php:526
+msgid "Animate It Classes"
+msgstr "Animate It Classes"
+
+#: edsanimate.php:301
+msgid "Submit"
+msgstr "Отправить"
+
+#: edsanimate.php:293
+msgid "Custom CSS"
+msgstr "Пользовательские CSS"
+
+#: edsanimate.php:282
+msgid "Hide Vertical Scrollbar"
+msgstr "Скрыть вертикальную полосу прокрутки"
+
+#: edsanimate.php:271
+msgid "Hide Horizontal Scrollbar"
+msgstr "Скрыть горизонтальную полосу прокрутки"
+
+#: edsanimate.php:260
+msgid "Enable on Tablets"
+msgstr "Включить на планшетах"
+
+#: edsanimate.php:254 edsanimate.php:265 edsanimate.php:276 edsanimate.php:287
+#: assets/helper/edsanimate-tinymce-popup.php:456
+msgid "No"
+msgstr "Нет"
+
+#: edsanimate.php:253 edsanimate.php:264 edsanimate.php:275 edsanimate.php:286
+#: assets/helper/edsanimate-tinymce-popup.php:454
+msgid "Yes"
+msgstr "Да"
+
+#: edsanimate.php:249
+msgid "Enable on Smartphones"
+msgstr "Включить на смартфонах"
+
+#: edsanimate.php:240
+msgid "Scroll Offset (in percentage)"
+msgstr "Смещение прокрутки (в процентах)"
+
+#: edsanimate.php:219
+msgid "Failed to save options."
+msgstr "Не удалось сохранить параметры."
+
+#: edsanimate.php:213
+msgid "Options saved."
+msgstr "Настройки сохранены."
+
+#: edsanimate.php:105 edsanimate.php:179
+msgid "Animate It! Options"
+msgstr "Параметры Animate It!"
+
+#. Author of the plugin
+msgid "eLEOPARD Design Studios"
+msgstr "Дизайн-студия eLEOPARD"
+
+#. Description of the plugin
+msgid "Add cool CSS3 animations to your content."
+msgstr "Добавление в содержимое крутых анимаций CSS3."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "http://www.eleopard.in"
+msgstr "http://www.eleopard.in"
+
+#. Plugin Name of the plugin
+#: edsanimate.php:106 assets/helper/edsanimate-tinymce-popup.php:505
+msgid "Animate It!"
+msgstr "Animate It!"

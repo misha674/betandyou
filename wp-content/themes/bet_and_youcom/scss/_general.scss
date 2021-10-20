@@ -1,0 +1,240 @@
+::selection {
+  color: $textWhite;
+  background: $accentColor;
+}
+
+html {
+  @include text-style(normal, $fontSize, 1.5, normal, $textLight);
+  font-family: $font;
+  font-size: ($fontSize / 16px) * 100%;
+}
+
+body {
+  background-color: $mainColor;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1238px;
+  margin: 0 auto;
+  padding: 0 22px;
+  height: 100%;
+
+  @media screen and (max-width: 992px) {
+    max-width: 100%;
+  }
+
+  &.fluid-mobile {
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+  }
+
+  &.columns {
+    flex-direction: row;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+
+  &.centered {
+    justify-content: center;
+  }
+
+  .primary {
+    width: 75%;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  .secondary {
+    padding-left: 30px;
+    width: 25%;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.page {
+  padding-top: 70px;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 50px;
+  }
+}
+
+.styled-text {
+  @include text-style(normal, $fontSize, 1.5, normal, $textLight);
+  word-wrap: anywhere;
+
+  h1 {
+    @include text-style(bold, 46px, 1.15, uppercase, $textWhite);
+    padding: 10px 0 30px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      padding: 0 0 20px;
+    }
+  }
+
+  h2 {
+    @include text-style(bold, 36px, 1.15, uppercase, $textWhite);
+    padding: 10px 0 30px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      padding: 0 0 20px;
+    }
+  }
+
+  h3 {
+    @include text-style(bold, 26px, 1.15, uppercase, $textWhite);
+    padding-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      padding-bottom: 18px;
+    }
+  }
+
+  h4 {
+    @include text-style(bold, 18px, 1.15, uppercase, $textWhite);
+    padding-bottom: 16px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      padding-bottom: 14px;
+    }
+  }
+
+  a {
+    color: $accentColor;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+
+  blockquote {
+    border-left: 3px solid $accentColor;
+    margin: 10px 0 30px;
+    padding-left: 30px;
+    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      padding-left: 20px;
+    }
+
+    p {
+      padding-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 36px;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: 768px) {
+        padding-left: 25px;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: $radiusSmall;
+        transform: translateY(50%);
+        background: $accentColor;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: item;
+
+    li {
+      display: block;
+      margin-bottom: 20px;
+
+      &::before {
+        content: counter(item) ". ";
+        counter-increment: item;
+        display: inline-block;
+        font-weight: bold;
+        width: 24px;
+        color: $accentColor;
+        padding-right: 12px;
+      }
+
+      @media screen and (max-width: 768px) {
+        &::before {
+          padding-right: 1px;
+        }
+      }
+    }
+  }
+
+  .wp-block-columns {
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+
+  .wp-block-column:not(:first-child) {
+    margin-left: 30px;
+
+    @media screen and (max-width: 992px) {
+      margin-left: 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  &.center {
+    text-align: center;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &::selection {
+    color: $textDark;
+  }
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}

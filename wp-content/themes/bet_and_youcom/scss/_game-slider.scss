@@ -1,0 +1,80 @@
+.game-slider {
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 992px) {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    @include text-style(bold, 36px, 1.15, uppercase, $textWhite);
+    padding-bottom: 30px;
+  }
+
+  &__body {
+    margin: 0 -10px;
+    padding-bottom: 50px;
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    background: $sliderArrow center center no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      background-image: $sliderArrowActive;
+    }
+
+    &_left {
+      order: 1;
+      transform: rotate(-180deg);
+    }
+
+    &_right {
+      order: 3;
+    }
+  }
+
+  &__dots {
+    order: 2;
+    position: relative;
+    margin: 0 40px;
+
+    @media screen and (max-width: 544px) {
+      margin: 0 20px;
+    }
+
+    button {
+      border: none;
+      background-color: $mainLighter;
+
+      &:hover,
+      &:active {
+        background-color: $mainBorder;
+        background: $mainGradient;
+      }
+    }
+
+    .slick-active {
+      button {
+        background-color: $mainBorder;
+        background: $mainGradient;
+      }
+    }
+  }
+
+  .slick-slide {
+    margin: 0 10px;
+  }
+}
