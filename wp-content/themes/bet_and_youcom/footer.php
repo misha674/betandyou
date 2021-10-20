@@ -43,10 +43,7 @@
           </span>
         </div>
 
-        <div class="footer__license">
-          <img class="footer__license-img" src="<?php bloginfo("template_url"); ?>/images/license.png" alt="license">
-        </div>
-      </div>
+
 
       <div class="footer__bottom">
         <div class="copyright">
