@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Database Backup for WordPress - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-05-12 10:49:28+0000\n"
+"PO-Revision-Date: 2021-10-01 14:18:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -288,7 +288,7 @@ msgstr "Сервер: %s"
 
 #: wp-db-backup.php:392 wp-db-backup.php:910
 msgid "Generated: %s"
-msgstr "Дата: %s"
+msgstr "Сгенерировано: %s"
 
 #: wp-db-backup.php:390 wp-db-backup.php:908
 msgid "WordPress MySQL database backup"
@@ -328,7 +328,7 @@ msgstr "Уход с этой страницы приведёт к поврежд
 
 #: wp-db-backup.php:243
 msgid "Progress:"
-msgstr "В процессе:"
+msgstr "Прогресс:"
 
 #: wp-db-backup.php:241
 msgid "Click the Stop or Back buttons in your browser"

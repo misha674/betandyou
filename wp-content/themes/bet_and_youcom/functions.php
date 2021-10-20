@@ -369,9 +369,32 @@ function theme_scripts_and_styles() {
   // new styles
   wp_enqueue_style('theme-style', get_stylesheet_uri(), array(), 'bld_1613660306223');
 
+  // =======Yegor custum style======
+
+  wp_enqueue_style('custumadmin-styles', get_stylesheet_directory_uri() . '/custumcss/custumstyle.css');
+
   // new scripts
   wp_enqueue_script('theme-script', get_template_directory_uri() . '/js/bundle.js', array('jquery'), 'bld_1613660306222', true);
+
 }
+
+
+// =======Yegor custum style======
+// add_action('wp_enqueue_scripts', 'stylemycustum');
+
+// function stylemycustum() {
+//   wp_enqueue_style('custumadmin-styles', get_stylesheet_directory_uri() . '/custumcss/style.css');
+// }
+//  =======Yegor custum style=======
+
+
+//  ======Yegor custum sсript======
+// add_action('wp_enqueue_scripts', 'scriptmycustum', 13);
+
+// function scriptmycustum() {
+//   wp_enqueue_style('custumadmin-script', get_template_directory_uri() . '/js/scriptmycustum.js');
+// }
+//  ======Yegor custum sсript======
 
 
 if( function_exists('acf_add_local_field_group') ):

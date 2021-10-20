@@ -34,7 +34,14 @@
 
       <?php set_query_var( 'stream', 'line' ); ?>
       <?php get_template_part('template-parts/table-line', 'js'); ?>
+
       <?php //get_template_part('template-parts/table', 'api'); ?>
+
+
+      <!-- На главной странице (под таблицами с коэфициентами) подверстать аккуратно блок, в который автоматически будут выводиться новости (последнее две, например) – изображение новости и аннотация к нему. Ориентировочная визуализация: -->
+
+      <?php get_template_part('template-parts/block-news'); ?>
+
 
       <div class="main-text styled-text">
       </div>

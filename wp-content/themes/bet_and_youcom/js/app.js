@@ -13,6 +13,22 @@ $(document).ready(function () {
     $('.header__right').slideToggle()
   })
 
+  // search-form animated start
+  // function searchToggle(obj, evt) {
+  //   var container = jQuery(obj).closest('.search-form');
+  //   if (!container.hasClass('active')) {
+  //     container.addClass('active');
+  //     evt.preventDefault();
+  //   }
+  //   else if (container.hasClass('active') && jQuery(obj).closest('.input-holder').length == 0) {
+  //     container.removeClass('active');
+  //     container.find('.search-input').val(''); // input clear
+  //   }
+  // }
+  
+  // searchToggle();
+  // search - form animated end
+
   // slider
   $('.slider__img').slick({
     asNavFor: '.slider__content',

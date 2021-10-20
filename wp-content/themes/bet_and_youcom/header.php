@@ -91,6 +91,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </nav>
 
           <div class="header__socials socials">
+
+            <!--   сверстал свою форму но позже применил плагин relevnancy -->
+            <!-- <div class="search-form">
+              <div class="input-holder">
+                <input type="text" class="search-input" placeholder="Enter your search text" />
+                <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+              </div>
+              <span class="close" onclick="searchToggle(this, event);"></span>
+            </div> -->
+            <!-- add search end -->
+            
+            <!-- Dобавил стандартную форму  wordpress -->
+              <?php get_search_form(); ?>
+            
+
             <span class="socials__icon" data-link="Z28tYmV0">
               <img src="<?php bloginfo("template_url"); ?>/images/icons/fb.svg" alt="Facebook">
             </span>

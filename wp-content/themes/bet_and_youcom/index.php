@@ -27,6 +27,7 @@
       <?php get_template_part('template-parts/table-live', 'js'); ?>
       <?php //get_template_part('template-parts/table', 'api'); ?>
 
+   
       <div class="main-text styled-text">
       </div>
     </div>
