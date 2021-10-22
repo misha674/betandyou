@@ -24,7 +24,7 @@
   <div class="container columns">
     <div class="primary">
       <?php set_query_var( 'stream', 'live' ); ?>
-      <?php get_template_part('template-parts/table-live', 'js'); ?>
+      <!-- <?php get_template_part('template-parts/table-live', 'js'); ?> -->
       <?php //get_template_part('template-parts/table', 'api'); ?>
 
       <div class="main-text styled-text">

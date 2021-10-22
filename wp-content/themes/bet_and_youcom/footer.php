@@ -30,7 +30,7 @@
             'depth' => 1
           ) ); ?>
         </nav>
-
+      
         <div class="footer__paid paid">
           <span class="paid__icon" data-link="Z28tYmV0">
             <img src="<?php bloginfo("template_url"); ?>/images/paid/mastercard.svg" alt="mastercard">
@@ -41,6 +41,10 @@
           <span class="paid__icon" data-link="Z28tYmV0">
             <img src="<?php bloginfo("template_url"); ?>/images/paid/ecopayz.svg" alt="ecopayz">
           </span>
+        </div>
+
+        <div class="footer__license">
+          <img class="footer__license-img" src="<?php bloginfo("template_url"); ?>/images/license.png" alt="license">
         </div>
       </div>
 

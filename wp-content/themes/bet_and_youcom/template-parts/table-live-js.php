@@ -1,195 +1,161 @@
-<script>
-let cat_api = '<?php the_field('select_api'); ?>'
-cat_api = cat_api != '' && cat_api != 'default' ? `?category=${cat_api}` : ''
+<!-- let cat_api = '<?php the_field('select_api'); ?>'
+cat_api = cat_api != '' && cat_api != 'default' ? `?category=${cat_api}` : '' -->
 
-fetch('https://myscoreapi.herokuapp.com/betandyou' + cat_api)
-  .then(data => data.json())
-  .then(data => createRowLive(data.results))
-  .catch(err => console.warn(err))
 
-const createRowLive = (arr) => {
-  let content = ''
+<?php 
+  // echo(the_field('select_api'));
+//   $url = 'https://part.upnp.xyz/PartLine/GetAllFeedGamesBetAndYou?sportid=1';// JSON URL
+        
+//   $curl = curl_init($url);
+//   curl_setopt($curl, CURLOPT_URL, $url); 
+//   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  
+//   $headers = array(
+//      "Accept: application/json",
+//   );
+//   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+//   curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
 
-  arr.map((row, i) => {
-    if (i >= 5) return
+//   //for debug only!
+//   // curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+//   // curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+  
+//   $resp = curl_exec($curl);
 
-    content += `
-    <div class="table__row">
-      <div class="info">
-        <div class="table__cell mobile">
-          <span class="trim bold">${row.chemp_name}</span>
-        </div>
-        <div class="table__cell players">
-          <span class="trim name">${row.player1}</span>
-          <span class="sep mobile"> - </span>
-          <span class="trim name">${row.player2}</span>
-        </div>
-      </div>
-      <div class="values">
-        <div class="table__cell number">
-          <div class="table__col">
-            <span class="number__head mobile">1</span>
-            <span class="number__val">${row.col1[0] ? row.col1[0] : '-'}</span>
-          </div>
-          <div class="table__col">
-            <span class="number__head mobile">x</span>
-            <span class="number__val">${row.col1[1] ? row.col1[1] : '-'}</span>
-          </div>
-          <div class="table__col">
-            <span class="number__head mobile">2</span>
-            <span class="number__val">${row.col1[2] ? row.col1[2] : '-'}</span>
-          </div>
-        </div>
-        <div class="table__cell number">
-          <div class="table__col">
-            <span class="number__head mobile">1x</span>
-            <span class="number__val">${row.col2[0] ? row.col2[0] : '-'}</span>
-          </div>
-          <div class="table__col">
-            <span class="number__head mobile">12</span>
-            <span class="number__val">${row.col2[1] ? row.col2[1] : '-'}</span>
-          </div>
-          <div class="table__col">
-            <div class="number__head mobile">2x</div>
-            <span class="number__val">${row.col2[2] ? row.col2[2] : '-'}</span>
-          </div>
-        </div>
-        <div class="table__cell number">
-          <div class="table__col">
-            <span class="number__head mobile">ABAIXO</span>
-            <span class="number__val">${row.col3[0] ? row.col3[0] : '-'}</span>
-          </div>
-          <div class="table__col">
-            <span class="number__head mobile">TOTAL</span>
-            <span class="number__val">${row.col3[1] ? row.col3[1] : '-'}</span>
-          </div>
-          <div class="table__col">
-            <span class="number__head mobile">ACIMA</span>
-            <span class="number__val">${row.col3[2] ? row.col3[2] : '-'}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    `
-  })
+  // curl_close($curl);
+  
+  // print_r($resp);
 
-  document.querySelector('.table__spinner').remove()
-  document.querySelector('.table__body.live').insertAdjacentHTML('afterbegin', content);
+//   $myPostData = json_decode(file_get_contents('/API.json'), true);
+  // $res = $myPostData["results"];
+//   print_r($myPostData);
+
+$url = "https://part.upnp.xyz/PartLine/GetAllFeedGamesBetAndYou";
+
+function uploadApi($apiUrl)
+{
+    $page = file_get_contents($apiUrl);
+    if ($page!=""){ 
+        return $page;
+    } else {
+        return uploadApi($apiUrl);       
+    }
 }
-</script>
+
+$page = uploadApi($url);
+// var_dump($page);
+// file_put_contents(__DIR__ . '/API'.date("Ymdhis").'.json', $page);
+
+  echo "222";
+  ?>
+    <pre>
+      <?php
+        // var_dump($page);
+        // var_dump($myPostData);
+        // echo date("Ymdhis");
+      ?>
+    </pre>
+<?php
+  echo "33443";
+?>
+
 
 <div class="table" data-link="Z28tYmV0">
-  <div class="table__header desktop">
-    <div class="table__row">
-      <div class="table__cell">
-        <span class="trim">LIVE</span>
-      </div>
-      <div class="table__cell small">
-        <div class="table__col">1</div>
-        <div class="table__col">x</div>
-        <div class="table__col">2</div>
-      </div>
-      <div class="table__cell small">
-        <div class="table__col">1x</div>
-        <div class="table__col">12</div>
-        <div class="table__col">2x</div>
-      </div>
-      <div class="table__cell small">
-        <div class="table__col">
-          <span class="trim">ABAIXO</span>
+    <div class="table__header desktop">
+        <div class="table__row">
+            <div class="table__cell">
+                <span class="trim">LIVE</span>
+            </div>
+            <div class="table__cell small">
+                <div class="table__col">1</div>
+                <div class="table__col">x</div>
+                <div class="table__col">2</div>
+            </div>
+            <div class="table__cell small">
+                <div class="table__col">1x</div>
+                <div class="table__col">12</div>
+                <div class="table__col">2x</div>
+            </div>
+            <div class="table__cell small">
+                <div class="table__col">
+                    <span class="trim">ABAIXO</span>
+                </div>
+                <div class="table__col">
+                    <span class="trim">TOTAL</span>
+                </div>
+                <div class="table__col">
+                    <span class="trim">ACIMA</span>
+                </div>
+            </div>
         </div>
-        <div class="table__col">
-          <span class="trim">TOTAL</span>
-        </div>
-        <div class="table__col">
-          <span class="trim">ACIMA</span>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="table__body live">
-    <div class="table__spinner"
-      style="display:flex;justify-content:center;width:100%;background-color:#fff;text-align:center">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        style="transparent;display:block;" width="200px" height="200px" viewBox="0 0 100 100"
-        preserveAspectRatio="xMidYMid">
-        <g transform="rotate(0 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(30 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8333333333333334s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(60 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.75s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(90 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6666666666666666s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(120 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5833333333333334s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(150 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(180 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4166666666666667s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(210 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3333333333333333s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(240 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.25s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(270 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.16666666666666666s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(300 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.08333333333333333s"
-              repeatCount="indefinite"></animate>
-          </rect>
-        </g>
-        <g transform="rotate(330 50 50)">
-          <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#353535">
-            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite">
-            </animate>
-          </rect>
-        </g>
-      </svg>
-    </div>
-  </div>
+    <!-- <div class="table__body live">
+        <?php
+      $i=0;
+      while($i <= 4) {      
+       echo '<div class="table__row">
+            <div class="info">
+                <div class="table__cell mobile">
+                    <span class="trim bold">${row.chemp_name}</span>
+                </div>
+                <div class="table__cell players">
+                    <span class="trim name">'. $res[$i][player1] .'</span>
+                    <span class="sep mobile"> - </span>
+                    <span class="trim name">'. $res[$i][player2] .'</span>
+                </div>
+            </div>
+            <div class="values">
+                <div class="table__cell number">
+                    <div class="table__col">
+                        <span class="number__head mobile">1</span>
+                        <span class="number__val">'. ($res[$i][col1][0] ?? "-") .'</span>
+                    </div>
+                    <div class="table__col">
+                        <span class="number__head mobile">x</span>
+                        <span class="number__val">'. ($res[$i][col1][1] ?? "-") .'</span>
+                    </div>
+                    <div class="table__col">
+                        <span class="number__head mobile">2</span>
+                        <span class="number__val">'. ($res[$i][col1][2] ?? "-") .'</span>
+                    </div>
+                </div>
+                <div class="table__cell number">
+                    <div class="table__col">
+                        <span class="number__head mobile">1x</span>
+                        <span class="number__val">'. ($res[$i][col2][0] ?? "-") .'</span>
+                    </div>
+                    <div class="table__col">
+                        <span class="number__head mobile">12</span>
+                        <span class="number__val">'. ($res[$i][col2][1] ?? "-") .'</span>
+                    </div>
+                    <div class="table__col">
+                        <div class="number__head mobile">2x</div>
+                        <span class="number__val">'. ($res[$i][col2][2] ?? "-") .'</span>
+                    </div>
+                </div>
+                <div class="table__cell number">
+                    <div class="table__col">
+                        <span class="number__head mobile">ABAIXO</span>
+                        <span class="number__val">'. ($res[$i][col3][0] ?? "-") .'</span>
+                    </div>
+                    <div class="table__col">
+                        <span class="number__head mobile">TOTAL</span>
+                        <span class="number__val">'. ($res[$i][col2][1] ?? "-") .'</span>
+                    </div>
+                    <div class="table__col">
+                        <span class="number__head mobile">ACIMA</span>
+                        <span class="number__val">'. ($res[$i][col3][2] ?? "-") .'</span>
+                    </div>
+                </div>
+            </div>
+        </div>';
+        
+    $i++;
+      }
+    ?>
+    </div> -->
 </div>
 
 <button data-link="Z28tYmV0" class="btn btn_o table__button">
-  <span>Veja todas as apostas AO VIVO</span>
+    <span>Veja todas as apostas AO VIVO</span>
 </button>

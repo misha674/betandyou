@@ -25,15 +25,15 @@
     <div class="primary">
 
       <?php set_query_var( 'stream', 'live' ); ?>
-      <?php get_template_part('template-parts/table-live', 'js'); ?>
+      <!-- <?php get_template_part('template-parts/table-live', 'js'); ?> -->
       <?php //get_template_part('template-parts/table', 'api'); ?>
 
       <div class="styled-text">
         <h2>Line</h2>
       </div>
 
-      <?php set_query_var( 'stream', 'line' ); ?>
-      <?php get_template_part('template-parts/table-line', 'js'); ?>
+      <!-- <?php set_query_var( 'stream', 'line' ); ?>
+      <?php get_template_part('template-parts/table-line', 'js'); ?> -->
       <?php //get_template_part('template-parts/table', 'api'); ?>
 
       <div class="main-text styled-text">

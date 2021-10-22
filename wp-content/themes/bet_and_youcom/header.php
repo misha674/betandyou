@@ -91,6 +91,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </nav>
 
           <div class="header__socials socials">
+            
+            <!-- Dобавил стандартную форму  wordpress -->
+              <?php get_search_form(); ?>
+            
+
             <span class="socials__icon" data-link="Z28tYmV0">
               <img src="<?php bloginfo("template_url"); ?>/images/icons/fb.svg" alt="Facebook">
             </span>
