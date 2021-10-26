@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCK,AAAD,kBAAQ,AAAC,CACL,cAAc,CAAE,GAAG,CACtB",
+    "sources": [
+        "../scss/upgradeStyle.scss",
+        "../scss/upgradeStyles/_main-page.scss"
+    ],
+    "names": [],
+    "file": "upgradeStyle.min.css"
+}

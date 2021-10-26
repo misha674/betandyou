@@ -35,6 +35,8 @@
       <?php set_query_var( 'stream', 'line' ); ?>
       <?php get_template_part('template-parts/table-line', 'js'); ?>
       <?php //get_template_part('template-parts/table', 'api'); ?>
+      
+      <?php get_template_part('template-parts/all-news');?>
 
       <div class="main-text styled-text">
       </div>

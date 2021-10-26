@@ -1,0 +1,10 @@
+.blog__body {
+    &-onMain {
+        flex-direction: row;
+        justify-content: space-between;
+        .blog__item {
+            flex-direction: column;
+            max-width: 49%;
+        }
+    }
+}
