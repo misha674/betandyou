@@ -19,7 +19,7 @@
         </a>
         <?php } ?>
 
-        <nav class="footer__menu menu flat">
+        <!-- <nav class="footer__menu menu flat">
           <?php wp_nav_menu( array(
             'theme_location' => 'footer-menu',
             'menu_class' => 'nav-list-wrapper kill-list',
@@ -29,7 +29,7 @@
             'walker'=> new Beautiful_Walker_Nav_Menu(),
             'depth' => 1
           ) ); ?>
-        </nav>
+        </nav> -->
 
         <div class="footer__paid paid">
           <span class="paid__icon" data-link="Z28tYmV0">
@@ -42,6 +42,9 @@
             <img src="<?php bloginfo("template_url"); ?>/images/paid/ecopayz.svg" alt="ecopayz">
           </span>
         </div>
+        <span class="paid__icon paid__icon-license" data-link="Z28tYmV0">
+          <img src="<?php bloginfo("template_url"); ?>/images/license.png" alt="ecopayz">
+        </span>
       </div>
 
       <div class="footer__bottom">

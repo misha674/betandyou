@@ -1,0 +1,11 @@
+.footer {
+    &__body {
+        .paid__icon {
+            &-license {
+                img {
+                    max-height: 70px;
+                }
+            }
+        }
+    }
+}
