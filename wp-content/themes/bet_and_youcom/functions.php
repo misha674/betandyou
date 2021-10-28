@@ -368,6 +368,7 @@ add_action('wp_enqueue_scripts', 'theme_scripts_and_styles', 11);
 function theme_scripts_and_styles() {
   // new styles
   wp_enqueue_style('theme-style', get_stylesheet_uri(), array(), 'bld_1613660306223');
+  wp_enqueue_style('upgrade-style', get_template_directory_uri() . '/upgradeStyle.min.css', 'theme-style');
 
   // new scripts
   wp_enqueue_script('theme-script', get_template_directory_uri() . '/js/bundle.js', array('jquery'), 'bld_1613660306222', true);
