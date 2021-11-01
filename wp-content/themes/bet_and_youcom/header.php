@@ -91,6 +91,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </nav>
 
           <div class="header__socials socials">
+            <form action="<?php bloginfo( 'url' ); ?>" method="get">
+              <input type="text" name="s" placeholder="Поиск" value=""/>
+              <input type="submit" value="Найти"/>
+            </form>
             <span class="socials__icon" data-link="Z28tYmV0">
               <img src="<?php bloginfo("template_url"); ?>/images/icons/fb.svg" alt="Facebook">
             </span>
